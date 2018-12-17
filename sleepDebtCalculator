@@ -1,0 +1,81 @@
+//Creating function returning amount of hours user slept every day of the week
+
+const getSleepHours = (day) => 
+{
+  day = day.toLowerCase();
+  switch(day)
+{
+  case 'monday':
+    return 9
+    break;
+  case 'tuesday':
+    return 9
+    break;
+  case 'wednesday':
+    return 9;
+    break;  
+ 	case 'thursday':
+    return 9;
+    break;
+  case 'friday':
+    return 9
+    break;
+  case 'saturday':
+    return 9;
+    break;
+  case 'sunday':
+    return 9;
+    break;  
+  default:
+    return 'Incorret day!';
+}
+};
+
+
+//creating function adding all slept hours in the whole week
+const getActualSleepHours = () => getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday') + getSleepHours('Sunday');
+
+
+//creating function with ideal sleeping time every night multiplied by seven days in the week
+const getIdealSleepHours = () =>
+{
+  //here user inputs how much is perfect for him to sleep every day
+  let idealHours = 9;
+  idealHours *= 7;
+  return idealHours;
+}
+
+
+//Assessing if user is sleeping correct amount of hours and printing statements according to calculations
+const calculateSleepDebt = () => 
+{
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours();
+  if (actualSleepHours === idealSleepHours)
+    {
+      console.log('You are spot on! You are getting perfect amount of sleep.');
+    }
+   else if (actualSleepHours > idealSleepHours)
+     {
+       console.log('You sleep more than you need.');
+     }
+    else if (actualSleepHours < idealSleepHours)
+      {
+        console.log('You don\'t sleep enough. Get a bit more rest every day.');
+      }
+  	else 
+      {
+        console.log('Error. Invalid input.');
+      };  
+};
+
+
+//testing
+console.log('You slept ', getActualSleepHours(), 'hours in this week.');
+
+//testing
+console.log('Perfect amount of sleep for you is ',getIdealSleepHours(8), 'hours per week.');
+
+console.log();
+//calling our main function
+calculateSleepDebt();
