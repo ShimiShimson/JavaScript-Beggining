@@ -7,7 +7,7 @@ const getUserChoice  = (userInput) => {
   }
   else
   {
-    return 'Invalid choice!'
+    return 'Invalid choice!';
   }    
   };
 
@@ -70,8 +70,8 @@ if (userChoice === 'bomb')
       else
         {
           console.log('Please change for valid choice.');
-        };
-}
+        }
+};
 
 //Declaration of variables to receive return from functions. Input for User choice.
 const playGame = () => 
