@@ -1,1 +1,1 @@
-# JavaScript-Beggining
+# JavaScript-Beginning
